@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>EcoDrive: Calculadora de Consumo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>EcoDrive: Calculadora de Consumo Óptimo de Combustible</h1>
+
+    <div class="tabs">
+    <button class="tab active">Calculadora</button>
+    </div>
+
+    <div class="calculator">
+      <strong>Calculadora de Consumo de Combustible</strong>
+      <p>Ingrese los detalles del vehículo para calcular el consumo de combustible:</p>
+
+      <label for="velocidad">Velocidad (km/h)</label>
+      <input type="number" id="velocidad" value="0">
+
+      <label for="peso">Peso (kg)</label>
+      <input type="number" id="peso" value="0">
+
+      <label for="terreno">Terreno</label>
+      <select id="terreno">
+        <option>Plano</option>
+        <option>Subida</option>
+        <option>Bajada</option>
+      </select>
+
+      <label for="distancia">Distancia (Km)</label>
+      <input type="number" id="distancia" value="20">
+      
+
+      <button id="calcular">Calcular</button>
+      <div id="resultado" style="margin-top: 15px;"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
