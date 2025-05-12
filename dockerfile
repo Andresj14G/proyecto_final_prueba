@@ -16,11 +16,12 @@ RUN python3 -m venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
 
 # Copy and install Python dependencies inside the venv
-COPY calculadora-consumo-combustible/requirements.txt ./requirements.txt
+COPY requirements.txt ./requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy application code
-COPY calculadora-consumo-combustible/ ./
+# Copy application code (excluding requirements.txt)
+COPY "calculadora consumo combustible/" ./calculadora-consumo-combustible/
+COPY backend/ ./backend/
 
 # Expose port (Render will use the PORT env var)
 ENV PORT=8000
