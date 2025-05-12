@@ -10,7 +10,8 @@ CORS(app, origins="http://localhost:8000")
 oc = Oct2Py()
 
 # Ruta al script de Octave
-oc.addpath(r"C:\Users\andre\Downloads\proyecto final modelamiento\calculadora-consumo-combustible\backend")
+oc.addpath(os.getcwd())
+
 
 @app.route('/')
 def index():
