@@ -29,7 +29,7 @@ document.getElementById('calcular').addEventListener('click', function() {
     };
 
     // Hacer la solicitud al servidor
-    fetch('http://localhost:5000/calcular', {
+    fetch(`${window.env.API_URL}/calcular`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
