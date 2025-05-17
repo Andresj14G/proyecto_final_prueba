@@ -46,4 +46,4 @@ document.getElementById('calcular').addEventListener('click', function() {
         console.error('Error:', error);
         resultadoDiv.innerHTML = "<span class='error'>Error al obtener los resultados. Verifique la consola.</span>";
     });
-});z
+});
